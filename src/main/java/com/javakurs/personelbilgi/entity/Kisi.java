@@ -52,7 +52,8 @@ public class Kisi implements Serializable {
     @Size(min = 1, max = 20)
     @Column(name = "soyad")
     private String soyad;
-    @OneToMany(mappedBy = "kisiId", fetch = FetchType.LAZY)
+    
+    @OneToMany(mappedBy = "kisi", fetch = FetchType.LAZY)
     private List<Telefon> telefonList;
 
     public Kisi() {

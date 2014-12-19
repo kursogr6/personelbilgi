@@ -44,7 +44,7 @@ public class Telefon implements Serializable {
     private String telNo;
     @JoinColumn(name = "kisi_id", referencedColumnName = "id")
     @ManyToOne(fetch = FetchType.LAZY)
-    private Kisi kisiId;
+    private Kisi kisi;
 
     public Telefon() {
     }
@@ -70,11 +70,11 @@ public class Telefon implements Serializable {
     }
 
     public Kisi getKisiId() {
-        return kisiId;
+        return kisi;
     }
 
-    public void setKisiId(Kisi kisiId) {
-        this.kisiId = kisiId;
+    public void setKisiId(Kisi kisi) {
+        this.kisi = kisi;
     }
 
     @Override
