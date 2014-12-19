@@ -69,11 +69,11 @@ public class Telefon implements Serializable {
         this.telNo = telNo;
     }
 
-    public Kisi getKisiId() {
+    public Kisi getKisi() {
         return kisi;
     }
 
-    public void setKisiId(Kisi kisi) {
+    public void setKisi(Kisi kisi) {
         this.kisi = kisi;
     }
 

@@ -11,18 +11,23 @@
         <f:view>
             <h:form>
                 <p:panelGrid columns="2">
+                    <f:facet name="header">
+                        <p:outputLabel value="Kişi Ekle"/>
+                    </f:facet>
                     <p:outputLabel value="Adı:"/>
-                    <p:inputText value=""/>
+                    <p:inputText value="#{kayitBean.kisi.ad}"/>
                     
                     <p:outputLabel value="Soyad:"/>
-                    <p:inputText value=""/>
+                    <p:inputText value="#{kayitBean.kisi.soyad}"/>
                     
                     <p:outputLabel value="Cep Tel:"/>
-                    <p:inputText value=""/>
+                    <p:inputText value="#{kayitBean.cepTel.telNo}"/>
                     
                     <p:outputLabel value="Ev Tel:"/>
-                    <p:inputText value=""/>
-                    
+                    <p:inputText value="#{kayitBean.evTel.telNo}"/>
+                    <f:facet name="footer">
+                        <p:outputLabel value="Kişi Ekle"/>
+                    </f:facet>
                 </p:panelGrid> 
             </h:form>
         </f:view>
