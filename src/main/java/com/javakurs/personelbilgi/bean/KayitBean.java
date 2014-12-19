@@ -23,17 +23,16 @@ import javax.enterprise.context.RequestScoped;
 @Named(value = "kayitBean")
 @RequestScoped
 public class KayitBean {
+
     @EJB
     private KayitService kayitService;
-   
 
-    
-    private Kisi kisi =new Kisi();
+    private Kisi kisi = new Kisi();
     private Telefon cepTel = new Telefon();
-    private Telefon evTel =new Telefon();
-    
+    private Telefon evTel = new Telefon();
+
     public KayitBean() {
-        
+
     }
 
     public Kisi getKisi() {
@@ -59,17 +58,25 @@ public class KayitBean {
     public void setEvTel(Telefon evTel) {
         this.evTel = evTel;
     }
-    public void ekle(){
-    //one-to-man çift taraflıdır.ikisindende set etmek gerekiyor.
+
+    public void ekle() {
+
+        //one-to-man çift taraflıdır.ikisindende set etmek gerekiyor.
         List<Telefon> telefonList = new ArrayList<Telefon>();
+
         telefonList.add(evTel);
         telefonList.add(cepTel);
-        
+
         kisi.setTelefonList(telefonList);
-        cepTel.setKisi(kisi);
-        evTel.setKisi(kisi);
-         kayitService.Ekle(kisi);
-       
+//        cepTel.setKisi(kisi);
+//        evTel.setKisi(kisi);
+        
+        kayitService.Ekle(kisi);
+        
+        kisi =new Kisi();
+        cepTel = new Telefon();
+        evTel = new Telefon();
+
     }
-    
+
 }
