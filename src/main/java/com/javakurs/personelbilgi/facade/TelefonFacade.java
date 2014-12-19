@@ -16,7 +16,7 @@ import javax.persistence.PersistenceContext;
  */
 @Stateless
 public class TelefonFacade extends AbstractFacade<Telefon> {
-    @PersistenceContext(unitName = "com.javakurs_PersonelBilgi_war_1.0-SNAPSHOTPU")
+    @PersistenceContext(unitName = "personelbilgiPU")
     private EntityManager em;
 
     @Override
